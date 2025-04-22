@@ -7,7 +7,7 @@
 #define DIR_CW     0
 #define DIR_CCW    1
 
-void contPot_init(CONTPOT *pot)
+void contPot_init(ContPot *pot)
 {
     pot->pos, pot->dir = 0;
     pot->lastReadingA, pot->lastReadingB = 0;
@@ -19,7 +19,7 @@ void contPot_init(CONTPOT *pot)
     }
 }
 
-void contPot_update(CONTPOT *pot, uint16_t readingA, uint16_t readingB)
+void contPot_update(ContPot *pot, uint16_t readingA, uint16_t readingB)
 {
     // Update readings and filter raw values
     if(abs(readingA-pot->lastReadingA) < FILTER_HYSTERISIS || abs(readingB-pot->lastReadingB) < FILTER_HYSTERISIS)
