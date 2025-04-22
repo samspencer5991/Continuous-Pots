@@ -15,10 +15,10 @@ typedef struct
     uint16_t readingsA[RV142FPF_NUM_READINGS];  
     uint16_t readingsB[RV142FPF_NUM_READINGS];
     uint8_t readIndex;
-} CONTPOT;
+} ContPot;
 
-void contPot_init(CONTPOT *pot);
+void contPot_init(ContPot *pot);
 
-void contPot_update(CONTPOT *pot, uint16_t readingA, uint16_t readingB);
+void contPot_update(ContPot *pot, uint16_t readingA, uint16_t readingB);
 
 #endif /* CONTINUOUS_POT_H */
